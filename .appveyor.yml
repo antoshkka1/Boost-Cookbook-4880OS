@@ -34,11 +34,11 @@ before_build:
 
 
     - qmake "QMAKE_CXX=gcc" "QMAKE_LINK=g++" "BOOST_PATH=%BOOST%" BoostBook.pro
-    - make -j4
+    - nmake
     - python ./test.py
 
     - qmake "QMAKE_CXX=msvc" "BOOST_PATH=%BOOST%" BoostBook.pro
-    - make -j4
+    - nmake
     - python ./test.py
 
 
