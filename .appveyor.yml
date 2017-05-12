@@ -34,7 +34,7 @@ before_build:
 
 
     - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
-    - qmake "QMAKE_CXX=msvc" "BOOST_PATH=%BOOST%" BoostBook.pro
+    - qmake "BOOST_PATH=%BOOST%" BoostBook.pro
     - nmake
     - python ./test.py
 
