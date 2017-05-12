@@ -33,11 +33,12 @@ before_build:
     - set BOOST=C:/boost-local
 
 
-    - qmake "QMAKE_CXX=gcc" "QMAKE_LINK=g++" "BOOST_PATH=%BOOST%" BoostBook.pro
+    - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+    - qmake "QMAKE_CXX=msvc" "BOOST_PATH=%BOOST%" BoostBook.pro
     - nmake
     - python ./test.py
 
-    - qmake "QMAKE_CXX=msvc" "BOOST_PATH=%BOOST%" BoostBook.pro
+    - qmake "QMAKE_CXX=gcc" "QMAKE_LINK=g++" "BOOST_PATH=%BOOST%" BoostBook.pro
     - nmake
     - python ./test.py
 
