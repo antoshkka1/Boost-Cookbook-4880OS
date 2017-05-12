@@ -11,7 +11,7 @@
 # File revision #3 + modifications
 
 init:
-    - set BRANCH_TO_TEST=%APPVEYOR_REPO_BRANCH%  # Change to branch you wish to test. Use %APPVEYOR_REPO_BRANCH% for current branch.
+    - set BRANCH_TO_TEST=master  # Change to Boost branch you wish to test with. Use %APPVEYOR_REPO_BRANCH% for current branch.
 
 ###############################################################################################################
 # From this point and below code is same for all the Boost libs
