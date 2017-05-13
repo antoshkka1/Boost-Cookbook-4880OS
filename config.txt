@@ -2,7 +2,7 @@
 
 # ... QMake specific settings that shall not be modified
 TEMPLATE = app
-CONFIG -= console
+CONFIG += console
 CONFIG -= qt
 CONFIG += thread
 
