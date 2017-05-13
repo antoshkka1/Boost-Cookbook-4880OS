@@ -8,4 +8,4 @@ HEADERS += \
     tasks_processor_network.hpp
 
 SOURCES += main.cpp
-LIBS += -lboost_thread -lboost_system
+!msvc:LIBS += -lboost_thread -lboost_system
