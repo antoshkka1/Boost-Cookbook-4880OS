@@ -19,7 +19,7 @@ isEmpty(BOOST_PATH) {
 # Paths to boost headers and libraries
 # (if you are using Linux and installed Boost from repository you may comment out those lines)
 INCLUDEPATH += $$BOOST_PATH
-LIBPATH += $$BOOST_PATH/stage/lib
+LIBS += -L"$$BOOST_PATH/stage/lib"
 QMAKE_RPATHDIR += $$BOOST_PATH/stage/lib
 
 # Boost specific defines
