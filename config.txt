@@ -16,10 +16,9 @@ isEmpty(BOOST_PATH) {
 # Compiler to use (comment out to use default one)
 #QMAKE_CXX = clang++
 
-# Paths to boost headers and libraries
+# Paths to boost headers and libraries.
 # (if you are using Linux and installed Boost from repository you may comment out those lines)
 INCLUDEPATH += $$BOOST_PATH
-LIBS += -L"$$BOOST_PATH/stage/lib"
 QMAKE_RPATHDIR += $$BOOST_PATH/stage/lib
 
 # Boost specific defines
@@ -40,7 +39,9 @@ msvc {
 
 # Disabling some annoing warnings.
 msvc {
+    QMAKE_LFLAGS += /LIBPATH:$$BOOST_PATH/stage/lib
     DEFINES += _CRT_SECURE_NO_WARNINGS
 } else {
+    LIBS += -L$$BOOST_PATH/stage/lib
     QMAKE_CXXFLAGS += -Wno-deprecated-declarations
 }
