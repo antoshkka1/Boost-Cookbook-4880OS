@@ -44,7 +44,7 @@ build_script:
     - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
     - bootstrap.bat
     - b2.exe headers
-    - b2.exe -j4 toolset=msvc address-model=64 architecture=x86 --with-program_options --with-filesystem --with-system --with-test --with-thread --with-date_time --with-chrono --with-regex --with-random --with-context --with-coroutine stage
+    - b2.exe -j4 toolset=msvc address-model=64 architecture=x86 --with-program_options --with-filesystem --with-system --with-test --with-atomic --with-thread --with-date_time --with-chrono --with-regex --with-random --with-context --with-coroutine stage
     - cd %APPVEYOR_BUILD_FOLDER%
     - qmake "BOOST_PATH=%BOOST%" BoostBook.pro
     - nmake
