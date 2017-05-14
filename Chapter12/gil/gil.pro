@@ -4,4 +4,4 @@ if (!include(../../config.txt)) {
 
 SOURCES += main.cpp
 QMAKE_CXXFLAGS += $$CPP11FLAG
-!msvc:LIBS += -lpng
+LIBS += -lpng

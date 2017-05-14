@@ -9,15 +9,15 @@ CONFIG += thread
 # ... and a big portion of settings that reader may modify:
 
 isEmpty(BOOST_PATH) {
-    # Path to the Boost
+    # Path to the Boost.
     BOOST_PATH = /data/boost_1_63_0/
 }
 
-# Compiler to use (comment out to use default one)
+# Compiler to use (comment out to use default one).
 #QMAKE_CXX = clang++
 
-# Paths to boost headers and libraries.
-# (if you are using Linux and installed Boost from repository you may comment out those lines)
+# Paths to boost headers and libraries
+# (if you are using Linux and installed Boost from repository you may comment out those lines).
 INCLUDEPATH += $$BOOST_PATH
 QMAKE_RPATHDIR += $$BOOST_PATH/stage/lib
 
@@ -38,7 +38,7 @@ msvc {
     CPP14FLAG = -std=c++14
 }
 
-# Disabling some annoing warnings.
+# Disabling some annoing warnings and adding paths to the Boost libraries.
 msvc {
     QMAKE_LFLAGS += /LIBPATH:$$BOOST_PATH/stage/lib
     DEFINES += _CRT_SECURE_NO_WARNINGS
