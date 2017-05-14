@@ -13,5 +13,5 @@ SOURCES += my_library.cpp
 HEADERS += my_library.hpp
 
 # Making a dynamic library
-DEFINES += MY_LIBRARY_LINK_DYNAMIC
+DEFINES += MY_LIBRARY_LINK_DYNAMIC=1
 

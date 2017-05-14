@@ -17,7 +17,7 @@ int MY_LIBRARY_API foo();
 class MY_LIBRARY_API bar { 
 public:
     /* ... */ 
-    MY_LIBRARY_API int meow() const;
+    int meow() const;
 };
 
 #include <stdexcept>
