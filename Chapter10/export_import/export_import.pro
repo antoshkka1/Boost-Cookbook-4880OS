@@ -12,8 +12,14 @@ HEADERS += ../my_library/my_library.hpp
 DEFINES += MY_LIBRARY_LINK_DYNAMIC
 
 msvc {
+    QMAKE_LFLAGS += /LIBPATH:../my_library/release
+    QMAKE_LFLAGS += /LIBPATH:../my_library/debug
     QMAKE_LFLAGS += /LIBPATH:release
     QMAKE_LFLAGS += /LIBPATH:debug
+    QMAKE_LFLAGS += /LIBPATH:../../Chapter10/my_library/release
+    QMAKE_LFLAGS += /LIBPATH:../../Chapter10/my_library/debug
+    QMAKE_LFLAGS += /LIBPATH:Chapter10/my_library/release
+    QMAKE_LFLAGS += /LIBPATH:Chapter10/my_library/debug
 } else {
     LIBS += -L../my_library
 }
